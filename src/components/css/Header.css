@@ -1,0 +1,279 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #00acde;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap as needed */
+  font-size: 1.5rem; /* Adjust the size as needed */
+  font-weight: bold;
+  color: black; /* Adjust the color to match your theme */
+}
+
+.logo img {
+  height: 50px; /* or any other size */
+  width: auto; /* maintain aspect ratio */
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px; /* Gives some padding around the links */
+  border-radius: 5px; /* Slight rounding of corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  background-color: #007bbd; /* Darker shade for hover state */
+  color: white;
+}
+
+.download-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.download-button:hover,
+.download-button:focus {
+  background-color: #007bbd; /* Darker shade for hover state */
+  color: white;
+  outline: none; /* Remove the focus border */
+}
+
+.download-button .star {
+  color: yellow; /* Or any color you prefer */
+  margin-left: 4px; /* Add some space between the text and the star */
+  /* You can add more styles if needed */
+}
+
+.sidebar-toggle {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navigation.show {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px; /* Sidebar width */
+  height: 100%;
+  background-color: #00a4ef;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.navigation.show a {
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  display: none;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hamburger-icon.open,
+.hamburger-icon.open::before,
+.hamburger-icon.open::after {
+  background-color: transparent;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+  left: 0px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+  left: 0px;
+}
+
+.hamburger-icon.open::before {
+  transform: translateY(0) rotate(45deg); /* Rotate top line to form one leg of the 'X' */
+  top: 0;
+}
+
+.hamburger-icon.open::after {
+  transform: translateY(0) rotate(-45deg); /* Rotate bottom line to form the other leg of the 'X' */
+  bottom: 0;
+}
+
+.menu-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.close-sidebar {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header,
+.menu-logo-container {
+  align-items: center; /* This will vertically center all elements in the header */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-start;
+    padding: 20px; /* Reduced padding for mobile */
+    justify-content: space-between;
+  }
+
+  .hamburger-icon {
+    display: block; /* Show the hamburger icon */
+    margin: 0; /* Reset margin */
+    padding: 0;
+  }
+
+  .hamburger-icon,
+  .sidebar-toggle,
+  .menu-logo-container {
+    padding: 0;
+    margin: 0;
+    /* Align items to ensure they are centered vertically */
+    align-items: center;
+  }
+
+  .header-content {
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .sidebar-toggle {
+    display: block; /* Show toggle button on mobile */
+    padding: 0; /* Reduce padding to decrease size */
+    background: none;
+    border: none;
+    color: white;
+  }
+
+  .navigation {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease; /* Smooth transition for sidebar and opacity */
+    opacity: 0; /* Make navigation fully transparent when hidden */
+    pointer-events: none;
+    display: none;
+  }
+
+  .navigation.show {
+    transform: translateX(0); /* Show sidebar */
+    display: flex; /* changed from block to flex */
+    transform: translateX(0);
+    z-index: 10;
+    opacity: 1; /* Make navigation fully visible */
+    pointer-events: auto;
+  }
+
+  .navigation.show .close-sidebar {
+    display: block; /* Show close button on mobile when sidebar is open */
+  }
+
+  .menu-logo-container {
+    flex-grow: 1;
+    justify-content: left; /* Center logo container */
+  }
+
+  .navigation.show {
+    display: flex; /* Use flexbox for centering */
+    transform: translateX(0); /* Bring onto screen */
+  }
+
+  /* Close button inside sidebar */
+  .close-sidebar {
+    display: block; /* Show the close button */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .download-button {
+    /* Adjust the download button size and position */
+    padding: 8px 16px; /* Adjust padding for a smaller button */
+    font-size: 14px; /* Adjust font size for readability */
+    margin-left: auto; /* Push the button to the right */
+    margin-right: 10px; /* Add some margin to the right of the button */
+  }
+
+  .download-button,
+  .sidebar-toggle,
+  .logo img {
+    height: 40px; /* Adjust the height as needed */
+    align-self: center; /* Center the items if they are not filling the header height */
+  }
+}
+
+@media (max-width: 375px) {
+  .download-button {
+    /* Further adjustments for smaller screens */
+    font-size: 12px; /* Smaller font size for very small screens */
+    padding: 6px 12px; /* Reduce padding */
+  }
+}
