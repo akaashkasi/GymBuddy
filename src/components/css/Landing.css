@@ -1,0 +1,253 @@
+/* General landing page styles */
+.landing-page {
+  background-color: #4cc5e8;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+  justify-content: space-around; /* Center content vertically */
+}
+
+/* Overlap styles */
+.landing-page .overlap {
+  position: relative;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally */
+  width: 100%;
+}
+
+/* Vector image styles */
+.landing-page .vector {
+  position: absolute;
+  top: 2vh; /* Relative to viewport height */
+  right: 5vw; /* Relative to viewport width */
+  width: 10vw; /* Relative to viewport width */
+  max-width: 150px; /* Maximum size */
+}
+
+/* Frame styles */
+.landing-page .frame {
+  width: 90vw;
+  margin: auto;
+}
+
+/* Overlap group styles */
+.landing-page .overlap-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+/* Chat bubble general styles */
+.landing-page .chat-bubble,
+.landing-page .chat-bubble-1,
+.landing-page .chat-bubble-left {
+  background-color: #00adef;
+  border-radius: 16px;
+  color: #fff;
+  padding: 1vh 2vw; /* Use viewport units for padding */
+  box-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
+  font-size: 1.5vh; /* Font size relative to viewport height */
+  position: absolute;
+  max-height: 10vh; /* Maximum height of the chat bubbles */
+  max-width: 20vw; /* Maximum width of the chat bubbles */
+  z-index: 3;
+}
+
+/* Positioning for chat bubbles */
+.landing-page .chat-bubble {
+  bottom: 15vh; /* Position from the bottom based on viewport height */
+  right: 25vw; /* Position from the right based on viewport width */
+}
+
+.landing-page .chat-bubble-1 {
+  bottom: 33vh; /* Position from the bottom based on viewport height */
+  right: 27vw; /* Position from the right based on viewport width */
+}
+
+.landing-page .chat-bubble-left {
+  bottom: 24vh; /* Position from the bottom based on viewport height */
+  left: 32vw; /* Position from the left based on viewport width */
+}
+/* Tail styles for chat
+bubbles */
+.landing-page .chat-bubble::after,
+.landing-page .chat-bubble-1::after,
+.landing-page .chat-bubble-left::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0.6vw;
+  border-color: #00adef transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+/* Tail adjustments */
+.landing-page .chat-bubble::after {
+  bottom: -1vw;
+  right: 1vw;
+}
+
+.landing-page .chat-bubble-1::after {
+  bottom: -1vw;
+  right: 1vw;
+}
+
+.landing-page .chat-bubble-left::after {
+  bottom: -1vw;
+  left: 1vw;
+}
+
+.landing-page .element-hand-with-phone,
+.landing-page .image {
+  position: absolute;
+  bottom: -1%;
+  z-index: 2;
+}
+
+.landing-page .element-hand-with-phone {
+  position: absolute;
+  bottom: -0.5vh; /* Adjust the bottom position based on viewport height */
+  left: 41%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 25vw; /* Set width relative to viewport width */
+  max-width: 200px; /* Set a maximum width to ensure it doesn't get too large */
+}
+
+.landing-page .image {
+  position: absolute;
+  bottom: 0.6vh; /* Adjust the bottom position based on viewport height */
+  left: 223%;
+  transform: translate(-50%, 0%);
+  z-index: 3;
+  width: 50vw; /* Set width relative to viewport width */
+  max-width: 300px; /* Set a maximum width to ensure it doesn't get too large */
+}
+
+.landing-page .rectangle {
+  position: absolute;
+  width: 50vw;
+  height: 40vh;
+  background-color: #a5e2f4;
+  top: 65%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.landing-page .text-wrapper {
+  position: absolute;
+  top: 10vh;
+  right: 12vw;
+  font-size: 4vw;
+  text-align: right;
+  white-space: nowrap;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    min-height: 60vh;
+  }
+
+  .landing-page .text-wrapper {
+    font-size: 5vw; /* Increase the font size a bit */
+    top: 8vh;
+    right: 10vw;
+  }
+
+  .landing-page .vector {
+    top: 3vh;
+    right: 10vw;
+    width: 15vw;
+  }
+
+  .landing-page .element-hand-with-phone {
+    bottom: 3vh;
+    left: 50%;
+    width: 40vw;
+  }
+
+  .landing-page .image {
+    bottom: 3vh;
+    left: 50%;
+    width: 40vw;
+  }
+
+  .landing-page .rectangle {
+    width: 70vw;
+    height: 50vh;
+    top: 60%;
+    left: 50%;
+  }
+}
+
+/* Add a media query for mobile devices */
+@media (max-width: 480px) {
+  .landing-page {
+    min-height: 50vh;
+  }
+
+  .landing-page .text-wrapper {
+    font-size: 7vw; /* Further increase the font size for small screens */
+    top: 15vh;
+    right: 5vw;
+  }
+
+  .landing-page .vector {
+    top: 5vh;
+    right: 5vw;
+    width: 20vw;
+  }
+
+  .landing-page .element-hand-with-phone {
+    bottom: 5vh;
+    left: 50%;
+    width: 60vw;
+  }
+
+  .landing-page .image {
+    bottom: 5vh;
+    left: 50%;
+    width: 60vw;
+  }
+
+  .landing-page .rectangle {
+    width: 80vw;
+    height: 60vh;
+    top: 55%;
+    left: 50%;
+  }
+
+  /* Adjust chat bubble sizes and positions */
+  .landing-page .chat-bubble,
+  .landing-page .chat-bubble-1,
+  .landing-page .chat-bubble-left {
+    max-width: 70vw;
+    max-height: 15vh;
+    font-size: 4vw; /* Adjust font size for readability */
+  }
+
+  .landing-page .chat-bubble {
+    bottom: 30vh;
+    right: 35vw;
+  }
+
+  .landing-page .chat-bubble-1 {
+    bottom: 40vh;
+    right: 35vw;
+  }
+
+  .landing-page .chat-bubble-left {
+    bottom: 50vh;
+    left: 35vw;
+  }
+}

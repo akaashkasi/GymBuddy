@@ -1,0 +1,193 @@
+/* Motivate.css */
+.feature-brief {
+  background-color: #ffe7b1;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Full width on mobile */
+  box-sizing: border-box;
+}
+
+.section-header h1 {
+  color: #00acde;
+  margin: 20px 0 10px 0;
+}
+
+.section-header h2 {
+  color: #000;
+  font-size: 2em;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  max-width: 1000px; /* Adjust this value if necessary */
+  width: 100%; /* Ensures this container takes the full width of its parent */
+  margin: auto; /* Centers the features container */
+}
+
+.feature {
+  background-color: #fffaef;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically on smaller screens */
+  align-items: center;
+  gap: 40px;
+  width: 100%; /* Take full width of its container */
+  box-sizing: border-box;
+}
+
+.phone-image {
+  width: auto; /* Adjusts based on the content size, but not exceeding max-width */
+  max-width: 300px; /* Maximum size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 516.4px; /* Maximum width on larger screens, adjust as needed */
+  padding: 0 20px; /* Padding inside the card */
+  box-sizing: border-box;
+}
+
+.feature-card h2 {
+  color: #333;
+  font-size: 1.2em;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .feature {
+    flex-direction: row; /* Side by side for medium screens */
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .feature-card {
+    max-width: 50%; /* Limit the text width */
+    padding: 0 20px; /* Padding around text */
+  }
+
+  .phone-image {
+    width: 50%; /* Adjust image width */
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .feature {
+    margin: 20px; /* Spacing between features */
+  }
+}
+
+@media (min-width: 1024px) {
+  .features {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .feature {
+    width: calc(33% - 30px); /* Adjust width for three columns */
+  }
+
+  .phone-image {
+    width: 100%; /* Larger images on larger screens /
+    max-width: none; / Override the max-width */
+  }
+
+  .feature-card {
+    align-items: flex-start; /* Align text to the left */
+  }
+}
+
+@media (min-width: 1280px) {
+  .feature-brief {
+    padding: 60px 80px; /* More padding on very large screens */
+  }
+
+  .section-header h2 {
+    font-size: 2.5em; /* Larger text on very large screens */
+  }
+
+  .feature-card h2 {
+    font-size: 1.5em; /* Larger headings on very large screens */
+  }
+
+  .feature-card p {
+    font-size: 1.2em; /* Larger text on very large screens */
+  }
+
+  .feature {
+    padding: 20px; /* Provide some padding around the features */
+    gap: 20px; /* Space between image and text */
+    flex-direction: row; /* Layout the feature elements in a row */
+    justify-content: center; /* Center the elements */
+    align-items: center; /* Align elements vertically */
+  }
+
+  .feature-card {
+    align-items: flex-start; /* Align text to the start */
+    padding: 0 20px; /* Padding on both sides */
+    max-width: 480px; /* Max width of the text container */
+  }
+
+  /* Make sure the phone image doesn't stretch too much and aligns properly with the feature card */
+  .phone-image {
+    width: auto; /* Allow the image to maintain its aspect ratio */
+    max-width: 300px; /* Limit the size of the image */
+    margin-right: 20px; /* Add space between the image and the feature card */
+  }
+}
+
+@media (min-width: 1440px) {
+  .feature {
+    display: flex;
+    justify-content: center; /* Center the items in the feature box */
+    align-items: center; /* Align items vertically */
+    gap: 40px; /* Provide some space between the image and text card */
+    padding: 30px; /* Adjust padding for larger feature boxes */
+  }
+
+  .phone-image {
+    width: auto; /* Maintain the original aspect ratio of the image */
+    height: auto; /* Maintain the original aspect ratio of the image */
+    max-width: 516.4px; /* Restrict the maximum width of the image to avoid it being too large */
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the start (left) */
+    padding: 0 20px; /* Maintain padding from smaller breakpoints */
+    max-width: 516.4px; /* Restrict the maximum width of the text card to avoid it being too wide */
+  }
+
+  /* Additional adjustments to ensure text does not overflow and is readable */
+  .feature-card h2,
+  .feature-card p {
+    text-align: left; /* Align the text to the left */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+    overflow-wrap: break-word; /* Ensure overflow text moves to the next line */
+  }
+}

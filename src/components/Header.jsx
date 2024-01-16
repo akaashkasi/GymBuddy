@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './css/Header.css';
 import logo from '../assets/images/logo.png';
 
-const Header = () => {
+export const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -19,7 +19,7 @@ const Header = () => {
           ></span>
         </button>
         <div className="logo">
-          <img src={logo} alt="gymbuddy logo" /> gymbuddy
+          <img src={logo} alt="gymbuddy logo" />
         </div>
       </div>
 

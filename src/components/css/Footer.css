@@ -1,0 +1,144 @@
+.contact-us {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue-Medium', Helvetica;
+}
+
+.contact-us * {
+  box-sizing: border-box;
+}
+
+.contact-us .frame {
+  max-width: 100%;
+  padding: 20px 40px; /* Increased side padding for centering */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-us .text-wrapper-2,
+.contact-us .frame-2 {
+  color: #ffffff;
+}
+
+.contact-us .text-wrapper-2 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: auto; /* Ensure responsiveness */
+}
+
+.button-instance {
+  width: auto; /* Ensure responsiveness */
+  max-width: none; /* Allow button to grow */
+  margin: 0 auto;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  padding: 25px 50px; /* Increased padding for a bigger button */
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px; /* Increased font size for visibility */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-us .frame-3 {
+  display: flex;
+  gap: 10px; /* Adjust gap for stacking */
+  margin-top: 20px;
+}
+
+.contact-us .icon-instance-node {
+  fill: white;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  text-align: center; /* Center the text for responsiveness */
+}
+
+.section-header .heading {
+  color: #00acde;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -1px;
+  width: fit-content;
+}
+
+.section-header .text-wrapper {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-us .frame,
+  .contact-us .div,
+  .contact-us .section-header-instance,
+  .contact-us .text-wrapper-2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .contact-us .frame-3 {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center; /* Centers the icons horizontally */
+    display: flex; /* This ensures that the flexbox model is applied */
+    flex-wrap: wrap; /* This allows the icons to wrap if space is constrained */
+  }
+
+  .contact-us .button-instance {
+    order: 3;
+    width: auto; /* Ensure the button width is auto to respect padding and border */
+    padding: 20px 40px; /* Increase padding if the button needs to be larger */
+    font-size: 18px; /* Adjust font-size if the button text needs to be larger */
+  }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 480px) {
+  .contact-us .frame {
+    padding: 0;
+  }
+
+  .contact-us .text-wrapper-2,
+  .contact-us .button-instance {
+    padding: 0.5em;
+  }
+
+  .contact-us .button-instance {
+    padding: 10px 20px;
+  }
+
+  .contact-us .frame-3 {
+    flex-direction: row;
+    gap: 10px;
+  }
+}

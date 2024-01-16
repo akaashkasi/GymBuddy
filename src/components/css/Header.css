@@ -9,6 +9,7 @@
   box-sizing: border-box;
   width: 100%;
   flex-wrap: nowrap;
+  font-family: 'Inter', sans-serif;
 }
 
 .logo {
@@ -53,7 +54,6 @@
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 5;
   transition:
     background-color 0.3s ease,
     color 0.3s ease; /* Smooth transition for hover effect */
