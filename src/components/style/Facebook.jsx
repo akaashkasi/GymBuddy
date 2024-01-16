@@ -6,7 +6,7 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 export const Facebook = ({ className, color }) => {
   return (
     <a
-      href="https://facebook.com/yourpage" // Replace with your actual Facebook page link
+      href="https://facebook.com/yourpage"
       className={`${className} footer-social-link`}
       target="_blank"
       rel="noopener noreferrer"

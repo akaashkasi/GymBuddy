@@ -5,11 +5,11 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 export const Linkedin = ({ className, color }) => {
   return (
     <a
-      href="https://linkedin.com/in/yourprofile" // Replace with your actual LinkedIn profile link
+      href="https://linkedin.com/in/yourprofile"
       className={`${className} footer-social-link`}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ color: color }} // Ensures the icon color is set to the color prop
+      style={{ color: color }}
     >
       <FontAwesomeIcon icon={faLinkedinIn} />
     </a>
@@ -23,5 +23,5 @@ Linkedin.propTypes = {
 
 Linkedin.defaultProps = {
   className: '',
-  color: 'white', // Default icon color is white
+  color: 'white',
 };

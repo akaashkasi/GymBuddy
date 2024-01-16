@@ -14,7 +14,7 @@
 
 .contact-us .frame {
   max-width: 100%;
-  padding: 20px 40px; /* Increased side padding for centering */
+  padding: 20px 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,20 +33,20 @@
   letter-spacing: 0;
   line-height: normal;
   position: relative;
-  width: auto; /* Ensure responsiveness */
+  width: auto;
 }
 
 .button-instance {
-  width: auto; /* Ensure responsiveness */
-  max-width: none; /* Allow button to grow */
+  width: auto;
+  max-width: none;
   margin: 0 auto;
   height: auto;
   border-radius: 20px;
   border: 1px solid #ffffff;
-  padding: 25px 50px; /* Increased padding for a bigger button */
+  padding: 25px 50px; 
   background-color: #ffffff;
   color: #000000;
-  font-size: 18px; /* Increased font size for visibility */
+  font-size: 18px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@
 
 .contact-us .frame-3 {
   display: flex;
-  gap: 10px; /* Adjust gap for stacking */
+  gap: 10px; 
   margin-top: 20px;
 }
 
@@ -71,7 +71,7 @@
   flex-direction: column;
   gap: 12px;
   position: relative;
-  text-align: center; /* Center the text for responsiveness */
+  text-align: center; 
 }
 
 .section-header .heading {
@@ -109,16 +109,16 @@
     order: 2;
     width: 100%;
     margin-top: 20px;
-    justify-content: center; /* Centers the icons horizontally */
-    display: flex; /* This ensures that the flexbox model is applied */
-    flex-wrap: wrap; /* This allows the icons to wrap if space is constrained */
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .contact-us .button-instance {
     order: 3;
-    width: auto; /* Ensure the button width is auto to respect padding and border */
-    padding: 20px 40px; /* Increase padding if the button needs to be larger */
-    font-size: 18px; /* Adjust font-size if the button text needs to be larger */
+    width: auto; 
+    padding: 20px 40px; 
+    font-size: 18px; 
   }
 }
 

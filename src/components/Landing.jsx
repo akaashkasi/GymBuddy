@@ -46,4 +46,4 @@ export const Landing = () => {
   );
 };
 
-export default Landing; // If you want to use default export instead
+export default Landing;

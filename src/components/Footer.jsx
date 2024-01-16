@@ -1,4 +1,4 @@
-import { Frame } from './style/Frame'; // Use './Frame' if Frame.jsx is in the same directory
+import { Frame } from './style/Frame';
 import { Facebook } from './style/Facebook';
 import { Instagram } from './style/Instagram';
 import { Linkedin } from './style/Linkedin';

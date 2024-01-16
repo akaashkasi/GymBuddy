@@ -1,8 +1,7 @@
 // Testimonials.jsx
 import './css/Testimonials.css';
 
-// Add your image imports here
-import Testimonial1 from '../assets/images/Testimonials1.png'; // Replace with your image paths
+import Testimonial1 from '../assets/images/Testimonials1.png';
 import Testimonial2 from '../assets/images/Testimonials2.png';
 import Testimonial3 from '../assets/images/Testimonials3.png';
 

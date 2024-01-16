@@ -20,4 +20,4 @@ export const Frame = () => {
   );
 };
 
-export default Frame; // If you want to use default export instead
+export default Frame;
