@@ -1,4 +1,6 @@
-CSS is wack :(
+# GymBuddy
+
+CSS is still needed to make it better; I suck at it :(
 
 Currently, two official plugins are available:
 
