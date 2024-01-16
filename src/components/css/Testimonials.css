@@ -9,8 +9,7 @@
 }
 
 .testimonials-heading {
-  margin-bottom: 40px; /* Space
-  between heading and image row */
+  margin-bottom: 40px;
 }
 
 .heading {
@@ -43,17 +42,19 @@
 }
 
 .testimonial-img-container {
-    width: calc(33.333% - 40px); /* Adjust the width as needed with the gap considered */
-    max-width: 300px; /* Set a maximum width for larger screens */
-    display: flex;
-    justify-content: center;
-  }
+  width: calc(
+    33.333% - 40px
+  ); /* Adjust the width as needed with the gap considered */
+  max-width: 300px; /* Set a maximum width for larger screens */
+  display: flex;
+  justify-content: center;
+}
 
 .testimonial-quote {
   background-color: #e6f7fc;
   border-radius: 20px;
   padding: 20px;
-  max-width: 300px; 
+  max-width: 300px;
   max-height: 400px; /* Match the height with the images */
   display: flex;
   flex-direction: column;

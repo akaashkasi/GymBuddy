@@ -1,0 +1,91 @@
+/* AboutUs.css */
+.about-us {
+  width: 100%;
+  background-color: white; /* or any color that matches your design */
+  text-align: center;
+  padding: 5% 10%; /* Use percentage for responsive padding */
+  font-family: 'Arial', sans-serif;
+}
+
+.about-title {
+  color: #00acde;
+  font-size: 2em; /* larger font-size */
+  margin: 0.5em 0; /* Provide space above and below */
+}
+
+.about-heading {
+  color: #000000;
+  font-size: 3em; /* larger font-size */
+  margin: 0.5em 0; /* Provide space above and below */
+}
+
+.about-text {
+  color: #333;
+  font-size: 1.25em; /* larger font-size for better readability */
+  margin: 1em auto; /* Provide top and bottom margin, center horizontally */
+  max-width: 800px; /* Maximum width to control line length */
+  padding: 0; /* Remove padding if not necessary */
+}
+
+.about-image-wrapper {
+  max-width: 800 px;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em; /* Space above the image */
+}
+
+.text-image {
+  display: block; /* Block-level elements can receive margin: auto */
+  max-width: 100%; /* Maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 2em auto; /* Vertical space and horizontally centered */
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .about-us {
+    padding: 60px 10%; /* More padding on larger screens */
+  }
+
+  .about-text {
+    font-size: 1.5em; /* Slightly larger font size */
+  }
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 3.5em; /* Even larger text for tablet and up */
+  }
+
+  .about-text {
+    font-size: 1.75em; /* Increase readability on tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center; /* Keep items centered */
+  }
+
+  .about-image-wrapper {
+    width: 50%; /* Larger images on larger screens */
+    max-width: 700px; /* Control maximum size */
+    margin-top: 3em; /* More space above the image */
+  }
+}
+
+/* For very large screens, you can add another media query */
+@media (min-width: 1440px) {
+  .about-heading {
+    font-size: 4em; /* Larger headings for very large screens */
+  }
+
+  .about-text {
+    font-size: 2em; /* Larger text for very large screens */
+  }
+
+  .about-image-wrapper {
+    max-width: 800px; /* Adjust the maximum width as needed */
+  }
+}

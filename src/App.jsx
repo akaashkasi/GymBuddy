@@ -5,6 +5,7 @@ import Landing from './components/Landing.jsx'; // Ensure this path is correct b
 import './App.css'; // Your existing App.css file
 import Motivate from './components/Motivate.jsx';
 import Testimonials from './components/Testimonials.jsx';
+import AboutUs from './components/AboutUs.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Landing />
       <Motivate />
       <Testimonials />
+      <AboutUs />
       <Footer />
     </div>
   );
