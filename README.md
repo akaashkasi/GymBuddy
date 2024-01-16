@@ -2,6 +2,13 @@
 
 CSS is still needed to make it better; I suck at it :(
 
+How to run:
+
+npm install
+npm run build
+npm run dev
+
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
